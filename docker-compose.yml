@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  graphql.domain.accounts:
+    image: ${DOCKER_REGISTRY-}graphqldomainaccounts
+    build:
+      context: .
+      dockerfile: GraphQL/Dockerfile
+
+  graphql.domain.users:
+    image: ${DOCKER_REGISTRY-}graphqldomainusers
+    build:
+      context: .
+      dockerfile: GraphQL.Domain.Users/Dockerfile
+
